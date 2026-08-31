@@ -1,5 +1,11 @@
-﻿using System.Runtime.Intrinsics.Arm;
-
+﻿/*
+ * Student ID : 1690701352
+ * Name       : Lab03
+ * Section    : 129b
+ * No.        : N/A
+ * Course     : GI113 Computer Programming (GI)
+ */
+using System;
 namespace Lab3
 {
     internal class Program
