@@ -107,6 +107,67 @@ namespace Lab02
             Console.WriteLine($"Hp; {currentHp5} / {maxHp5}");
             Console.WriteLine($"Attack Power; {attackPower5}");
             Console.WriteLine($"Is Boss; {isBoss5}");
+
+            //Part B
+            // ---------- Part B: My Own Game (SAMPLE ONLY — students design their own theme/values) ----------
+            // เกณฑ์การตรวจ Part B: 4 ตัวละคร x 5 stat/ตัว, รวมกันครบ 6 ชนิดข้อมูล, มี label กำกับ, ใช้ $"..." ทุกจุด
+            // ตัวอย่างธีมนี้ (ทีมนักผจญภัย 4 คน) เป็นแค่ 1 วิธี ไม่ใช่คำตอบเดียวที่ถูก ห้ามหักคะแนนถ้าธีม/ค่าไม่เหมือนตัวอย่างนี้
+
+            string hero1Name = "Anya";
+            int hero1Hp = 120;
+            float hero1Atk = 18.5f;
+            double hero1CritRate = 0.15;
+            char hero1Rank = 'A';
+
+            Console.WriteLine("====HERO A====");
+            Console.WriteLine($"NAME: {hero1Name}");
+            Console.WriteLine($"HP: {hero1Hp}");
+
+            //แบบที่ 1 ตั้งตัวแปรชื่อใหม่เพื่อปริ้น
+            string hero2Name = "Henry";
+            int hero2Hp = 120;
+            Console.WriteLine("====HERO B====");
+            Console.WriteLine($"NAME: {hero2Name}");
+            Console.WriteLine($"HP: {hero2Hp}");
+
+            //แบบที่ 2 ใช้ตัวแปรเดิม แต่เปลี่ยนค่าเพื่อปริ้น
+            hero1Name = "BlahBlah";
+            hero1Hp = 300;
+            Console.WriteLine("====HERO C====");
+            Console.WriteLine($"NAME: {hero1Name}");
+            Console.WriteLine($"HP: {hero1Hp}");
+            Console.WriteLine();
+
+            Console.WriteLine("LINE SEPERATION");
+            //แบบที่ 1 เว้นบรรทัด
+            Console.WriteLine();
+            Console.WriteLine("I'M NEW IN TOWN");
+
+            //แบบที่ 2 เว้นบรรทัด
+            Console.WriteLine("\nI'M NEW IN TOWN");
+
+            // LAB 2 PART B
+            string heroName = "Witch";
+            float crtiChance = 4.57f;
+            int money = 0;
+            char clanName = 'M';
+            int atkPoint = 15;
+
+            Console.WriteLine("\n===== MY HERO LIST ======");
+
+            // พิมพ์ต่อกัน โดยใช้ \n เพื่อเว้นบรรทัด
+            Console.WriteLine($"\nNAME: {heroName}\nCRIT CHANCE: {crtiChance}\nMONEY: {money}\nCLAN: {clanName}\nATK POINT {atkPoint}");
+
+            // พิมพ์แยก โดยใช้ \n และ + string เพื่อเว้นบรรทัด
+            Console.WriteLine($"\nNAME: {heroName}" +
+                $"\nCRIT CHANCE: {crtiChance}" +
+                $"\nMONEY: {money}" +
+                $"\nCLAN: {clanName}" +
+                $"\nATK POINT {atkPoint}\n");
+
+            // พิมพ์แยก โดยใช้ Console.WriteLine()
+            Console.WriteLine($"NAME: {heroName}");
+            Console.WriteLine($"CRIT CHANCE: {crtiChance}");
         }
     }
 }
