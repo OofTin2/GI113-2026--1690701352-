@@ -1,4 +1,4 @@
-﻿namespace Assignment__1
+﻿namespace Assignment01
 {
     internal class Program
     {
@@ -6,24 +6,30 @@
         {
             const string GameTitle = "Monster Hunter";
 
-            var heroName = "oOFtIN";
-            var heroWeapons = "Great Sword";
-            int heroMRLevel = 99;
-            float critChance = 99.5f;
+            int HunterRank = 999;
+            int Health = 120;
+            int Stamina = 100;
+            var WeaponsTypeBonus = "Less Phys Damage Taken";
             double AttackPower = 1260.5;
+            var Sharpness = "|=|=====/";
+            float Affinity = 99.5f;
+            var Element = "None";
             bool isdieable = true;
 
             Console.WriteLine($"===== {GameTitle} =====");
-            Console.WriteLine($"Hero Name   : {heroName}");
-            Console.WriteLine($"Weapons     : {heroWeapons}");
-            Console.WriteLine($"Level       : {heroMRLevel}");
-            Console.WriteLine($"Crit Chance : {critChance}");
+            Console.WriteLine($"Level       : {HunterRank}");
+            Console.WriteLine($"Health      : {Health}");
+            Console.WriteLine($"Stamina     : {Stamina}");
+            Console.WriteLine($"Weapons     : {WeaponsTypeBonus}");
+            Console.WriteLine($"===== ATTACK STATS =====");
             Console.WriteLine($"Attack Power: {AttackPower}");
-            Console.WriteLine($"Dieable    : {isdieable}");
+            Console.WriteLine($"Affinity    : {Affinity}");
+            Console.WriteLine($"Element     : {Element}");
+            Console.WriteLine($"Dieable     : {isdieable}");
             Console.WriteLine();
 
-            double heroMRLevelAsDouble = heroMRLevel;
-            Console.WriteLine($"Level as double (implicit): {heroMRLevelAsDouble}");
+            double HunterRankAsDouble = HunterRank;
+            Console.WriteLine($"Level as double (implicit): {HunterRankAsDouble}");
 
             int staminaTruncated = (int)AttackPower;              
             int staminaRounded = Convert.ToInt32(AttackPower);     
