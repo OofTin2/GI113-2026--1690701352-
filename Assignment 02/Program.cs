@@ -24,7 +24,7 @@ namespace Assignment_02
             Console.WriteLine(@"|          )_______(     |___|           -------   |___|\__\  \________/  |____________|      []     |");
             Console.WriteLine(@"------------------------------------------------------------------------------------------------------");
 
-            Console.WriteLine("Stellarium Smelting 0.1 / Salvage 0.25");
+            Console.WriteLine("Stellarium Smelting 0.25 / Salvage 0.3");
             Console.WriteLine("Smelting Capacity: 1000");
             Console.WriteLine("=> Key 'S' to Smelt(Ore->Ingot)");
             Console.WriteLine("=> Key 'B' to Breakdown (Ingot -> Ore)");
@@ -35,11 +35,8 @@ namespace Assignment_02
 
             bool amountOk = double.TryParse(Console.ReadLine(), out double Amount);
 
-            if (amountOk == false || Amount <= 0 || Amount > smeltCapacity)
+            if (amountOk == true && Amount > 0 && Amount <= smeltCapacity)
             {
-                Console.WriteLine("Invalid amount. Please enter a valid amount.");
-            }
-            else
                 if (Choice == 'S' || Choice == 's')
                 {
                     Console.WriteLine("You heat the Furnace and prepare to smelt the Stellarium ore into Ingot.");
@@ -51,14 +48,18 @@ namespace Assignment_02
                 {
                     Console.WriteLine("You set grinder to work and prepare to breakdown the Stellarium Ingot into ore.");
 
-                    double oreAmount = Amount * salvageRate;
+                    double oreAmount = Amount / salvageRate;
                     Console.WriteLine($"You have broken down {Amount} Stellarium Ingots into {oreAmount} Stellarium Ore.");
                 }
                 else
                 {
                     Console.WriteLine("You stand there, unsure of what to do.");
                 }
-            { }
+            }
+            else
+            {
+                Console.WriteLine("You put to much or too little ore/ingot.");
+            }
         }
 
     }
