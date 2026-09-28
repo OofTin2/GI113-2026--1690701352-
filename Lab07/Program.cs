@@ -22,7 +22,8 @@ namespace Lab07
             Console.WriteLine("2) Fire Magic");
             Console.WriteLine("3) Defend");
             Console.WriteLine("4) Run");
-            Console.Write("Choose (1-4): ");
+            Console.WriteLine("5) Dance and pull out gun");
+            Console.Write("Choose (1-5): ");
             int.TryParse(Console.ReadLine(), out int command);
 
             switch (command)
@@ -39,6 +40,9 @@ namespace Lab07
                 case 4:
                     Console.WriteLine("Hero looks for a way out...");
                     break;
+                case 5:
+                    Console.WriteLine("Hero starts dancing and pulls out a gun!");
+                    break;
                 default:
                     Console.WriteLine("Hero hesitates. Invalid command!");
                     break;
@@ -48,6 +52,7 @@ namespace Lab07
             {
                 1 => 12,
                 2 => 18,
+                5 => 25,
                 _ => 0
             };
             int damage = Math.Max(0, power - monsterDefense);
